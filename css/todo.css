@@ -1,0 +1,78 @@
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  color: #3e4144;
+}
+
+ul.tarefas {
+  padding-left: 0px;
+  list-style: none;
+}
+
+input:checked + label {
+  text-decoration: line-through;
+}
+
+li, div {
+  border-bottom-left-radius: 5px;
+}
+
+li {
+  margin: 5px 0;
+  border-bottom: 1px solid silver;
+
+}
+
+div {
+  padding: 5px 0;
+  border-left: 5px solid;
+  border-top-left-radius: 5px;
+}
+
+.reunioes {
+  border-color:  #70d6ffff;
+}
+
+.lazer {
+  border-color:  #ff70a6ff;
+}
+
+.saude {
+  border-color:  #ff9770ff;
+}
+
+.leitura {
+  border-color:  #ffd670ff;
+}
+
+.estudo {
+  border-color:  #e9ff70ff;
+}
+
+time {
+  float: right;
+}
+
+.meses {
+  color: #06a600
+}
+
+.mes {
+color: #adba2f
+}
+
+.semana {
+  color: #ffce7a;
+}
+
+.urgente {
+  color: #f18956;
+}
+
+.atrasada {
+  color: #d43d51;
+}
+
+
+
+
