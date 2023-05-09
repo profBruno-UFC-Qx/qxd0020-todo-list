@@ -9,8 +9,28 @@ ul.tarefas {
   list-style: none;
 }
 
-input:checked + label {
-  text-decoration: line-through;
+label {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 50%;
+  left: 0;
+  background-color: #3e4144;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+input:checked + label::before {
+  transform: scaleX(1);
 }
 
 li, div {
@@ -51,28 +71,49 @@ div {
 
 time {
   float: right;
+  color: #06a600;
+  margin-right: 10px;
 }
 
-.meses {
-  color: #06a600
+time.plural::after {
+  content: 's';
 }
 
-.mes {
-color: #adba2f
-}
-
-.semana {
-  color: #ffce7a;
-}
-
-.urgente {
-  color: #f18956;
-}
-
-.atrasada {
+time.late {
   color: #d43d51;
 }
 
+time.late.plural::after {
+  content: 's ago';
+}
 
+.sumario {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
 
+.bar {
+  display: block;
+  border-radius: 5px;
+  background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+  );
+  transition: width 0.2s ease;
+}
 
+button {
+  float: right;
+  color: white;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color:  #d43d51;
+}
+
+button:hover {
+  background-color:  #ea7787;
+}
