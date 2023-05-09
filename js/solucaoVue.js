@@ -185,9 +185,16 @@ app.component('task-list', {
 
 app.component('todo-summary', {
   props: ['tasks', 'concludedtasks'],
+  setup(props) {
+    const percentage = computed(() =>`${Math.round((props.concludedtasks/props.tasks)*100, 2)}%`)
+
+    return {
+      percentage
+    }
+  },
   template: `
     <p class="sumario" v-if="tasks > 0">
-      <span class="bar" :style="{width: (concludedtasks/tasks)*100 + '%' }">{{ Math.round((concludedtasks/tasks)*100, 2) }}%</span>
+      <span class="bar" :style="{width: percentage }">{{ percentage }}%</span>
     </p>
   `,
 })

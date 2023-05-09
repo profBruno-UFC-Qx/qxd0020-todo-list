@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/todo.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <main id="app">
+    <form action="" id="form">
+      <label for="categorais">Categorias</label>
+      <select name="categorias" id="categorias">
+        <option value="reunioes">Reuniões</option>
+        <option value="saude">Saúde</option>
+        <option value="lazer">Lazer</option>
+        <option value="leitura">Leitura</option>
+        <option value="estudo">Estudo</option>
+      </select>
+  
+      <label for="descricao">
+        Descrição:
+      </label>
+      <input type="text" name="descricao" id="descricao" placeholder="Digite aqui sua tarefa" required>
+  
+      <label for="data">
+        Data de entrega:
+      </label>
+      <input type="date" name="data" id="data">
+  
+      <input type="submit" value="Adicionar">
+    </form>
+  
+    <hr>
+  
+    <section>
+      <h1>Minhas tarefas</h1>
+      <ul class="tarefas" id="tarefas">
+      </ul>
+    </section>
+    <section>
+      <h1>Concluídas</h1>
+      <ul class="tarefas" id="concluidas"></ul>
+    </section>
+  </main>
+  <script src="js/solucao.js"></script>
+</body>
+</html>

@@ -9,41 +9,22 @@
 </head>
 <body>
   <main id="app">
-    <form action="" id="form">
-      <label for="categorais">Categorias</label>
-      <select name="categorias" id="categorias">
-        <option value="reunioes">Reuniões</option>
-        <option value="saude">Saúde</option>
-        <option value="lazer">Lazer</option>
-        <option value="leitura">Leitura</option>
-        <option value="estudo">Estudo</option>
-      </select>
-  
-      <label for="descricao">
-        Descrição:
-      </label>
-      <input type="text" name="descricao" id="descricao" placeholder="Digite aqui sua tarefa" required>
-  
-      <label for="data">
-        Data de entrega:
-      </label>
-      <input type="date" name="data" id="data">
-  
-      <input type="submit" value="Adicionar">
-    </form>
-  
+
+    <task-form @newtask="addTask"></task-form>
     <hr>
   
     <section>
-      <h1>Minhas tarefas</h1>
-      <ul class="tarefas" id="tarefas">
-      </ul>
+      <task-list title="Minhas tarefas" emptymsg="Nenhuma tarefa cadastrada!" :tasks="todoTasks" @delete="removeTask"></task-list>
     </section>
+    
     <section>
-      <h1>Concluídas</h1>
-      <ul class="tarefas" id="concluidas"></ul>
+      <task-list title="Concluídas" emptymsg="Nenhuma tarefa concluída!" :tasks="concludedTasks" @delete="removeTask"></task-list>
     </section>
+
+    <todo-summary :tasks="nTasks" :concludedtasks="nConcludedTasks">
+
   </main>
-  <script src="js/solucao.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/solucaoVue.js"></script>
 </body>
 </html>
