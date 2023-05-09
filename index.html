@@ -8,8 +8,8 @@
   <title>Document</title>
 </head>
 <body>
-  <main>
-    <form action="">
+  <main id="app">
+    <form action="" id="form">
       <label for="categorais">Categorias</label>
       <select name="categorias" id="categorias">
         <option value="reunioes">Reuniões</option>
@@ -36,45 +36,14 @@
   
     <section>
       <h1>Minhas tarefas</h1>
-  
-      <ul class="tarefas">
-        <li>
-          <div class="estudo">
-            <input type="checkbox" name="" id="t1">
-            <label for="t1">Ler documentação do Vue 3</label>
-            <time time="2023-04-03" class="atrasada">03/04/2023</time>
-          </div>
-        </li>
-        <li>
-          <div class="lazer">
-            <input type="checkbox" name="" id="t2">
-            <label for="t2">Assistir último filme da Marvel</label>
-            <time time="2023-04-10" class="urgente">10/04/2023</time>
-          </div>
-        </li>
-        <li>
-          <div class="reunioes">
-            <input type="checkbox" name="" id="t3">
-            <label for="t3">Kickoff do Projeto</label>
-            <time time="2023-04-30" class="semana">30/04/2023</time>
-          </div>
-        </li>
-        <li>
-          <div class="leitura">
-            <input type="checkbox" name="" id="t4">
-            <label for="t4">Assistir último livro do Game of Thrones</label>
-            <time time="2023-05-13" class="mes">13/05/2023</time>
-          </div>
-        </li>
-        <li>
-          <div class="saude">
-            <input type="checkbox" name="" id="t5">
-            <label for="t5">Fsioterapia</label>
-            <time time="2023-06-30" class="meses">30/06/2023</time>
-          </div>
-        </li>
+      <ul class="tarefas" id="tarefas">
       </ul>
     </section>
+    <section>
+      <h1>Concluídas</h1>
+      <ul class="tarefas" id="concluidas"></ul>
+    </section>
   </main>
+  <script src="js/solucao.js"></script>
 </body>
 </html>
